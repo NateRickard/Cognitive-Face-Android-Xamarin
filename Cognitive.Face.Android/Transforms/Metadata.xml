@@ -1,10 +1,240 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <metadata>
-	<!--
-  This sample removes the class: android.support.v4.content.AsyncTaskLoader.LoadTask:
-  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='AsyncTaskLoader.LoadTask']" />
-  
-  This sample removes the method: android.support.v4.content.CursorLoader.loadInBackground:
-  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='CursorLoader']/method[@name='loadInBackground']" />
-  -->
+	<!--	FaceServiceRestClient -->
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/constructor[@name='FaceServiceRestClient' and count(parameter)=1]/parameter[@name='p0']" name="name">subscriptionKey</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/constructor[@name='FaceServiceRestClient' and count(parameter)=2]/parameter[@name='p0']" name="name">serviceHost</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/constructor[@name='FaceServiceRestClient' and count(parameter)=2]/parameter[@name='p1']" name="name">subscriptionKey</attr>
+	<!--	public Face[] detect(String url, boolean returnFaceId, boolean returnFaceLandmarks, FaceAttributeType[] returnFaceAttributes)
+			public Face[] detect(InputStream imageStream, boolean returnFaceId, boolean returnFaceLandmarks, FaceAttributeType[] returnFaceAttributes) -->
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/method[@name='detect']/parameter[@name='p0' and @type='java.lang.String']" name="name">url</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/method[@name='detect']/parameter[@name='p0' and @type='java.io.InputStream']" name="name">imageStream</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/method[@name='detect']/parameter[@name='p1']" name="name">returnFaceId</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/method[@name='detect']/parameter[@name='p2']" name="name">returnFaceLandmarks</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/method[@name='detect']/parameter[@name='p3']" name="name">returnFaceAttributes</attr>
+	<!--	public VerifyResult verify(UUID faceId1, UUID faceId2) -->
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/method[@name='verify' and count(parameter)=2]/parameter[@name='p0']" name="name">faceId1</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/method[@name='verify' and count(parameter)=2]/parameter[@name='p1']" name="name">faceId2</attr>
+	<!--	public VerifyResult verify(UUID faceId, String personGroupId, UUID personId) -->
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/method[@name='verify' and count(parameter)=3]/parameter[@name='p0']" name="name">faceId</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/method[@name='verify' and count(parameter)=3]/parameter[@name='p1']" name="name">personGroupId</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/method[@name='verify' and count(parameter)=3]/parameter[@name='p2']" name="name">personId</attr>
+	<!--	public IdentifyResult[] identity(String personGroupId, UUID[] faceIds, int maxNumOfCandidatesReturned) -->
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/method[@name='identity' and count(parameter)=3]/parameter[@name='p0']" name="name">personGroupId</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/method[@name='identity' and count(parameter)=3]/parameter[@name='p1']" name="name">faceIds</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/method[@name='identity' and count(parameter)=3]/parameter[@name='p2']" name="name">maxNumOfCandidatesReturned</attr>
+	<!--	public IdentifyResult[] identity(String personGroupId, UUID[] faceIds, float confidenceThreshold, int maxNumOfCandidatesReturned) -->
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/method[@name='identity' and count(parameter)=4]/parameter[@name='p0']" name="name">personGroupId</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/method[@name='identity' and count(parameter)=4]/parameter[@name='p1']" name="name">faceIds</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/method[@name='identity' and count(parameter)=4]/parameter[@name='p2']" name="name">confidenceThreshold</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/method[@name='identity' and count(parameter)=4]/parameter[@name='p3']" name="name">maxNumOfCandidatesReturned</attr>
+	<!--	public void trainPersonGroup(String personGroupId) -->
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/method[@name='trainPersonGroup']/parameter[@name='p0']" name="name">personGroupId</attr>
+	<!--	public TrainingStatus getPersonGroupTrainingStatus(String personGroupId) -->
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/method[@name='getPersonGroupTrainingStatus']/parameter[@name='p0']" name="name">personGroupId</attr>
+	<!--	public void createPersonGroup(String personGroupId, String name, String userData) -->
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/method[@name='createPersonGroup']/parameter[@name='p0']" name="name">personGroupId</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/method[@name='createPersonGroup']/parameter[@name='p1']" name="name">name</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/method[@name='createPersonGroup']/parameter[@name='p2']" name="name">userData</attr>
+	<!--	public void deletePersonGroup(String personGroupId) -->
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/method[@name='deletePersonGroup']/parameter[@name='p0']" name="name">personGroupId</attr>
+	<!--	public void updatePersonGroup(String personGroupId, String name, String userData) -->
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/method[@name='updatePersonGroup']/parameter[@name='p0']" name="name">personGroupId</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/method[@name='updatePersonGroup']/parameter[@name='p1']" name="name">name</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/method[@name='updatePersonGroup']/parameter[@name='p2']" name="name">userData</attr>
+	<!--	public PersonGroup getPersonGroup(String personGroupId) -->
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/method[@name='getPersonGroup']/parameter[@name='p0']" name="name">personGroupId</attr>
+	<!--	public PersonGroup[] listPersonGroups(String start, int top) -->
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/method[@name='listPersonGroups']/parameter[@name='p0']" name="name">start</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/method[@name='listPersonGroups']/parameter[@name='p1']" name="name">top</attr>
+	<!--	public CreatePersonResult createPerson(String personGroupId, String name, String userData) -->
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/method[@name='createPerson']/parameter[@name='p0']" name="name">personGroupId</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/method[@name='createPerson']/parameter[@name='p1']" name="name">name</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/method[@name='createPerson']/parameter[@name='p2']" name="name">userData</attr>
+	<!--	public Person getPerson(String personGroupId, UUID personId) -->
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/method[@name='getPerson']/parameter[@name='p0']" name="name">personGroupId</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/method[@name='getPerson']/parameter[@name='p1']" name="name">personId</attr>
+	<!--	public Person[] getPersons(String personGroupId) -->
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/method[@name='getPersons']/parameter[@name='p0']" name="name">personGroupId</attr>
+	<!--	public AddPersistedFaceResult addPersonFace(String personGroupId, UUID personId, String url, String userData, FaceRectangle targetFace) 
+			public AddPersistedFaceResult addPersonFace(String personGroupId, UUID personId, InputStream imageStream, String userData, FaceRectangle targetFace) -->
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/method[@name='addPersonFace']/parameter[@name='p0']" name="name">personGroupId</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/method[@name='addPersonFace']/parameter[@name='p1']" name="name">personId</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/method[@name='addPersonFace']/parameter[@name='p2' and @type='java.lang.String']" name="name">url</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/method[@name='addPersonFace']/parameter[@name='p2' and @type='java.io.InputStream']" name="name">imageStream</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/method[@name='addPersonFace']/parameter[@name='p3']" name="name">userData</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/method[@name='addPersonFace']/parameter[@name='p4']" name="name">targetFace</attr>
+	<!--	public PersonFace getPersonFace(String personGroupId, UUID personId, UUID persistedFaceId) -->
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/method[@name='getPersonFace']/parameter[@name='p0']" name="name">personGroupId</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/method[@name='getPersonFace']/parameter[@name='p1']" name="name">personId</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/method[@name='getPersonFace']/parameter[@name='p2']" name="name">persistedFaceId</attr>
+	<!--	public void updatePersonFace(String personGroupId, UUID personId, UUID persistedFaceId, String userData) -->
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/method[@name='updatePersonFace']/parameter[@name='p0']" name="name">personGroupId</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/method[@name='updatePersonFace']/parameter[@name='p1']" name="name">personId</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/method[@name='updatePersonFace']/parameter[@name='p2']" name="name">persistedFaceId</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/method[@name='updatePersonFace']/parameter[@name='p3']" name="name">userData</attr>
+	<!--	public void updatePerson(String personGroupId, UUID personId, String name, String userData) -->
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/method[@name='updatePerson']/parameter[@name='p0']" name="name">personGroupId</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/method[@name='updatePerson']/parameter[@name='p1']" name="name">personId</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/method[@name='updatePerson']/parameter[@name='p2']" name="name">name</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/method[@name='updatePerson']/parameter[@name='p3']" name="name">userData</attr>
+	<!--	public void deletePerson(String personGroupId, UUID personId) -->
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/method[@name='deletePerson']/parameter[@name='p0']" name="name">personGroupId</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/method[@name='deletePerson']/parameter[@name='p1']" name="name">personId</attr>
+	<!--	public void deletePersonFace(String personGroupId, UUID personId, UUID persistedFaceId) -->
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/method[@name='deletePersonFace']/parameter[@name='p0']" name="name">personGroupId</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/method[@name='deletePersonFace']/parameter[@name='p1']" name="name">personId</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/method[@name='deletePersonFace']/parameter[@name='p2']" name="name">persistedFaceId</attr>
+	<!--	public SimilarFace[] findSimilar(UUID faceId, UUID[] faceIds, int maxNumOfCandidatesReturned) 
+			public SimilarFace[] findSimilar(UUID faceId, UUID[] faceIds, int maxNumOfCandidatesReturned, FindSimilarMatchMode mode) 
+			public SimilarPersistedFace[] findSimilar(UUID faceId, String faceListId, int maxNumOfCandidatesReturned) 
+			public SimilarPersistedFace[] findSimilar(UUID faceId, String faceListId, int maxNumOfCandidatesReturned, FindSimilarMatchMode mode) -->
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/method[@name='findSimilar']/parameter[@name='p0']" name="name">faceId</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/method[@name='findSimilar']/parameter[@name='p1' and @type='java.util.UUID[]']" name="name">faceIds</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/method[@name='findSimilar']/parameter[@name='p1' and @type='java.lang.String']" name="name">faceListId</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/method[@name='findSimilar']/parameter[@name='p2']" name="name">maxNumOfCandidatesReturned</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/method[@name='findSimilar']/parameter[@name='p3']" name="name">mode</attr>
+	<!--	public GroupResult group(UUID[] faceIds) -->
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/method[@name='group']/parameter[@name='p0']" name="name">faceIds</attr>
+	<!--	public void createFaceList(String faceListId, String name, String userData) -->
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/method[@name='createFaceList']/parameter[@name='p0']" name="name">faceListId</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/method[@name='createFaceList']/parameter[@name='p1']" name="name">name</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/method[@name='createFaceList']/parameter[@name='p2']" name="name">userData</attr>
+	<!--	public FaceList getFaceList(String faceListId) -->
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/method[@name='getFaceList']/parameter[@name='p0']" name="name">faceListId</attr>
+	<!--	public void updateFaceList(String faceListId, String name, String userData) -->
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/method[@name='updateFaceList']/parameter[@name='p0']" name="name">faceListId</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/method[@name='updateFaceList']/parameter[@name='p1']" name="name">name</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/method[@name='updateFaceList']/parameter[@name='p2']" name="name">userData</attr>
+	<!--	public void deleteFaceList(String faceListId) -->
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/method[@name='deleteFaceList']/parameter[@name='p0']" name="name">faceListId</attr>
+	<!--	public AddPersistedFaceResult addFacesToFaceList(String faceListId, String url, String userData, FaceRectangle targetFace) -->
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/method[@name='addFacesToFaceList']/parameter[@name='p0']" name="name">faceListId</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/method[@name='addFacesToFaceList']/parameter[@name='p1']" name="name">url</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/method[@name='addFacesToFaceList']/parameter[@name='p2']" name="name">userData</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/method[@name='addFacesToFaceList']/parameter[@name='p3']" name="name">targetFace</attr>
+	<!--	public AddPersistedFaceResult AddFaceToFaceList(String faceListId, InputStream imageStream, String userData, FaceRectangle targetFace) -->
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/method[@name='AddFaceToFaceList']/parameter[@name='p0']" name="name">faceListId</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/method[@name='AddFaceToFaceList']/parameter[@name='p1']" name="name">imageStream</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/method[@name='AddFaceToFaceList']/parameter[@name='p2']" name="name">userData</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/method[@name='AddFaceToFaceList']/parameter[@name='p3']" name="name">targetFace</attr>
+	<!--	public void deleteFacesFromFaceList(String faceListId, UUID persistedFaceId) -->
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/method[@name='deleteFacesFromFaceList']/parameter[@name='p0']" name="name">faceListId</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/method[@name='deleteFacesFromFaceList']/parameter[@name='p1']" name="name">persistedFaceId</attr>
+	<!--	IFaceServiceClient -->
+	<!--	public Face[] detect(String url, boolean returnFaceId, boolean returnFaceLandmarks, FaceAttributeType[] returnFaceAttributes)
+			public Face[] detect(InputStream imageStream, boolean returnFaceId, boolean returnFaceLandmarks, FaceAttributeType[] returnFaceAttributes) -->
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/interface[@name='FaceServiceClient']/method[@name='detect']/parameter[@name='p0' and @type='java.lang.String']" name="name">url</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/interface[@name='FaceServiceClient']/method[@name='detect']/parameter[@name='p0' and @type='java.io.InputStream']" name="name">imageStream</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/interface[@name='FaceServiceClient']/method[@name='detect']/parameter[@name='p1']" name="name">returnFaceId</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/interface[@name='FaceServiceClient']/method[@name='detect']/parameter[@name='p2']" name="name">returnFaceLandmarks</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/interface[@name='FaceServiceClient']/method[@name='detect']/parameter[@name='p3']" name="name">returnFaceAttributes</attr>
+	<!--	public VerifyResult verify(UUID faceId1, UUID faceId2) -->
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/interface[@name='FaceServiceClient']/method[@name='verify' and count(parameter)=2]/parameter[@name='p0']" name="name">faceId1</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/interface[@name='FaceServiceClient']/method[@name='verify' and count(parameter)=2]/parameter[@name='p1']" name="name">faceId2</attr>
+	<!--	public VerifyResult verify(UUID faceId, String personGroupId, UUID personId) -->
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/interface[@name='FaceServiceClient']/method[@name='verify' and count(parameter)=3]/parameter[@name='p0']" name="name">faceId</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/interface[@name='FaceServiceClient']/method[@name='verify' and count(parameter)=3]/parameter[@name='p1']" name="name">personGroupId</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/interface[@name='FaceServiceClient']/method[@name='verify' and count(parameter)=3]/parameter[@name='p2']" name="name">personId</attr>
+	<!--	public IdentifyResult[] identity(String personGroupId, UUID[] faceIds, int maxNumOfCandidatesReturned) -->
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/interface[@name='FaceServiceClient']/method[@name='identity' and count(parameter)=3]/parameter[@name='p0']" name="name">personGroupId</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/interface[@name='FaceServiceClient']/method[@name='identity' and count(parameter)=3]/parameter[@name='p1']" name="name">faceIds</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/interface[@name='FaceServiceClient']/method[@name='identity' and count(parameter)=3]/parameter[@name='p2']" name="name">maxNumOfCandidatesReturned</attr>
+	<!--	public IdentifyResult[] identity(String personGroupId, UUID[] faceIds, float confidenceThreshold, int maxNumOfCandidatesReturned) -->
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/interface[@name='FaceServiceClient']/method[@name='identity' and count(parameter)=4]/parameter[@name='p0']" name="name">personGroupId</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/interface[@name='FaceServiceClient']/method[@name='identity' and count(parameter)=4]/parameter[@name='p1']" name="name">faceIds</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/interface[@name='FaceServiceClient']/method[@name='identity' and count(parameter)=4]/parameter[@name='p2']" name="name">confidenceThreshold</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/interface[@name='FaceServiceClient']/method[@name='identity' and count(parameter)=4]/parameter[@name='p3']" name="name">maxNumOfCandidatesReturned</attr>
+	<!--	public void trainPersonGroup(String personGroupId) -->
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/interface[@name='FaceServiceClient']/method[@name='trainPersonGroup']/parameter[@name='p0']" name="name">personGroupId</attr>
+	<!--	public TrainingStatus getPersonGroupTrainingStatus(String personGroupId) -->
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/interface[@name='FaceServiceClient']/method[@name='getPersonGroupTrainingStatus']/parameter[@name='p0']" name="name">personGroupId</attr>
+	<!--	public void createPersonGroup(String personGroupId, String name, String userData) -->
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/interface[@name='FaceServiceClient']/method[@name='createPersonGroup']/parameter[@name='p0']" name="name">personGroupId</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/interface[@name='FaceServiceClient']/method[@name='createPersonGroup']/parameter[@name='p1']" name="name">name</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/interface[@name='FaceServiceClient']/method[@name='createPersonGroup']/parameter[@name='p2']" name="name">userData</attr>
+	<!--	public void deletePersonGroup(String personGroupId) -->
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/interface[@name='FaceServiceClient']/method[@name='deletePersonGroup']/parameter[@name='p0']" name="name">personGroupId</attr>
+	<!--	public void updatePersonGroup(String personGroupId, String name, String userData) -->
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/interface[@name='FaceServiceClient']/method[@name='updatePersonGroup']/parameter[@name='p0']" name="name">personGroupId</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/interface[@name='FaceServiceClient']/method[@name='updatePersonGroup']/parameter[@name='p1']" name="name">name</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/interface[@name='FaceServiceClient']/method[@name='updatePersonGroup']/parameter[@name='p2']" name="name">userData</attr>
+	<!--	public PersonGroup getPersonGroup(String personGroupId) -->
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/interface[@name='FaceServiceClient']/method[@name='getPersonGroup']/parameter[@name='p0']" name="name">personGroupId</attr>
+	<!--	public PersonGroup[] listPersonGroups(String start, int top) -->
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/interface[@name='FaceServiceClient']/method[@name='listPersonGroups']/parameter[@name='p0']" name="name">start</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/interface[@name='FaceServiceClient']/method[@name='listPersonGroups']/parameter[@name='p1']" name="name">top</attr>
+	<!--	public CreatePersonResult createPerson(String personGroupId, String name, String userData) -->
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/interface[@name='FaceServiceClient']/method[@name='createPerson']/parameter[@name='p0']" name="name">personGroupId</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/interface[@name='FaceServiceClient']/method[@name='createPerson']/parameter[@name='p1']" name="name">name</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/interface[@name='FaceServiceClient']/method[@name='createPerson']/parameter[@name='p2']" name="name">userData</attr>
+	<!--	public Person getPerson(String personGroupId, UUID personId) -->
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/interface[@name='FaceServiceClient']/method[@name='getPerson']/parameter[@name='p0']" name="name">personGroupId</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/interface[@name='FaceServiceClient']/method[@name='getPerson']/parameter[@name='p1']" name="name">personId</attr>
+	<!--	public Person[] getPersons(String personGroupId) -->
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/interface[@name='FaceServiceClient']/method[@name='getPersons']/parameter[@name='p0']" name="name">personGroupId</attr>
+	<!--	public AddPersistedFaceResult addPersonFace(String personGroupId, UUID personId, String url, String userData, FaceRectangle targetFace) 
+			public AddPersistedFaceResult addPersonFace(String personGroupId, UUID personId, InputStream imageStream, String userData, FaceRectangle targetFace) -->
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/interface[@name='FaceServiceClient']/method[@name='addPersonFace']/parameter[@name='p0']" name="name">personGroupId</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/interface[@name='FaceServiceClient']/method[@name='addPersonFace']/parameter[@name='p1']" name="name">personId</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/interface[@name='FaceServiceClient']/method[@name='addPersonFace']/parameter[@name='p2' and @type='java.lang.String']" name="name">url</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/interface[@name='FaceServiceClient']/method[@name='addPersonFace']/parameter[@name='p2' and @type='java.io.InputStream']" name="name">imageStream</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/interface[@name='FaceServiceClient']/method[@name='addPersonFace']/parameter[@name='p3']" name="name">userData</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/interface[@name='FaceServiceClient']/method[@name='addPersonFace']/parameter[@name='p4']" name="name">targetFace</attr>
+	<!--	public PersonFace getPersonFace(String personGroupId, UUID personId, UUID persistedFaceId) -->
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/interface[@name='FaceServiceClient']/method[@name='getPersonFace']/parameter[@name='p0']" name="name">personGroupId</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/interface[@name='FaceServiceClient']/method[@name='getPersonFace']/parameter[@name='p1']" name="name">personId</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/interface[@name='FaceServiceClient']/method[@name='getPersonFace']/parameter[@name='p2']" name="name">persistedFaceId</attr>
+	<!--	public void updatePersonFace(String personGroupId, UUID personId, UUID persistedFaceId, String userData) -->
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/interface[@name='FaceServiceClient']/method[@name='updatePersonFace']/parameter[@name='p0']" name="name">personGroupId</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/interface[@name='FaceServiceClient']/method[@name='updatePersonFace']/parameter[@name='p1']" name="name">personId</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/interface[@name='FaceServiceClient']/method[@name='updatePersonFace']/parameter[@name='p2']" name="name">persistedFaceId</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/interface[@name='FaceServiceClient']/method[@name='updatePersonFace']/parameter[@name='p3']" name="name">userData</attr>
+	<!--	public void updatePerson(String personGroupId, UUID personId, String name, String userData) -->
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/interface[@name='FaceServiceClient']/method[@name='updatePerson']/parameter[@name='p0']" name="name">personGroupId</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/interface[@name='FaceServiceClient']/method[@name='updatePerson']/parameter[@name='p1']" name="name">personId</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/interface[@name='FaceServiceClient']/method[@name='updatePerson']/parameter[@name='p2']" name="name">name</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/interface[@name='FaceServiceClient']/method[@name='updatePerson']/parameter[@name='p3']" name="name">userData</attr>
+	<!--	public void deletePerson(String personGroupId, UUID personId) -->
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/interface[@name='FaceServiceClient']/method[@name='deletePerson']/parameter[@name='p0']" name="name">personGroupId</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/interface[@name='FaceServiceClient']/method[@name='deletePerson']/parameter[@name='p1']" name="name">personId</attr>
+	<!--	public void deletePersonFace(String personGroupId, UUID personId, UUID persistedFaceId) -->
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/interface[@name='FaceServiceClient']/method[@name='deletePersonFace']/parameter[@name='p0']" name="name">personGroupId</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/interface[@name='FaceServiceClient']/method[@name='deletePersonFace']/parameter[@name='p1']" name="name">personId</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/interface[@name='FaceServiceClient']/method[@name='deletePersonFace']/parameter[@name='p2']" name="name">persistedFaceId</attr>
+	<!--	public SimilarFace[] findSimilar(UUID faceId, UUID[] faceIds, int maxNumOfCandidatesReturned) 
+			public SimilarFace[] findSimilar(UUID faceId, UUID[] faceIds, int maxNumOfCandidatesReturned, FindSimilarMatchMode mode) 
+			public SimilarPersistedFace[] findSimilar(UUID faceId, String faceListId, int maxNumOfCandidatesReturned) 
+			public SimilarPersistedFace[] findSimilar(UUID faceId, String faceListId, int maxNumOfCandidatesReturned, FindSimilarMatchMode mode) -->
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/interface[@name='FaceServiceClient']/method[@name='findSimilar']/parameter[@name='p0']" name="name">faceId</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/interface[@name='FaceServiceClient']/method[@name='findSimilar']/parameter[@name='p1' and @type='java.util.UUID[]']" name="name">faceIds</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/interface[@name='FaceServiceClient']/method[@name='findSimilar']/parameter[@name='p1' and @type='java.lang.String']" name="name">faceListId</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/interface[@name='FaceServiceClient']/method[@name='findSimilar']/parameter[@name='p2']" name="name">maxNumOfCandidatesReturned</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/interface[@name='FaceServiceClient']/method[@name='findSimilar']/parameter[@name='p3']" name="name">mode</attr>
+	<!--	public GroupResult group(UUID[] faceIds) -->
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/interface[@name='FaceServiceClient']/method[@name='group']/parameter[@name='p0']" name="name">faceIds</attr>
+	<!--	public void createFaceList(String faceListId, String name, String userData) -->
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/interface[@name='FaceServiceClient']/method[@name='createFaceList']/parameter[@name='p0']" name="name">faceListId</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/interface[@name='FaceServiceClient']/method[@name='createFaceList']/parameter[@name='p1']" name="name">name</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/interface[@name='FaceServiceClient']/method[@name='createFaceList']/parameter[@name='p2']" name="name">userData</attr>
+	<!--	public FaceList getFaceList(String faceListId) -->
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/interface[@name='FaceServiceClient']/method[@name='getFaceList']/parameter[@name='p0']" name="name">faceListId</attr>
+	<!--	public void updateFaceList(String faceListId, String name, String userData) -->
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/interface[@name='FaceServiceClient']/method[@name='updateFaceList']/parameter[@name='p0']" name="name">faceListId</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/interface[@name='FaceServiceClient']/method[@name='updateFaceList']/parameter[@name='p1']" name="name">name</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/interface[@name='FaceServiceClient']/method[@name='updateFaceList']/parameter[@name='p2']" name="name">userData</attr>
+	<!--	public void deleteFaceList(String faceListId) -->
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/interface[@name='FaceServiceClient']/method[@name='deleteFaceList']/parameter[@name='p0']" name="name">faceListId</attr>
+	<!--	public AddPersistedFaceResult addFacesToFaceList(String faceListId, String url, String userData, FaceRectangle targetFace) -->
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/interface[@name='FaceServiceClient']/method[@name='addFacesToFaceList']/parameter[@name='p1']" name="name">url</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/interface[@name='FaceServiceClient']/method[@name='addFacesToFaceList']/parameter[@name='p2']" name="name">userData</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/interface[@name='FaceServiceClient']/method[@name='addFacesToFaceList']/parameter[@name='p3']" name="name">targetFace</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/interface[@name='FaceServiceClient']/method[@name='addFacesToFaceList']/parameter[@name='p0']" name="name">faceListId</attr>
+	<!--	public AddPersistedFaceResult AddFaceToFaceList(String faceListId, InputStream imageStream, String userData, FaceRectangle targetFace) -->
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/interface[@name='FaceServiceClient']/method[@name='AddFaceToFaceList']/parameter[@name='p0']" name="name">faceListId</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/interface[@name='FaceServiceClient']/method[@name='AddFaceToFaceList']/parameter[@name='p1']" name="name">imageStream</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/interface[@name='FaceServiceClient']/method[@name='AddFaceToFaceList']/parameter[@name='p2']" name="name">userData</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/interface[@name='FaceServiceClient']/method[@name='AddFaceToFaceList']/parameter[@name='p3']" name="name">targetFace</attr>
+	<!--	public void deleteFacesFromFaceList(String faceListId, UUID persistedFaceId) -->
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/interface[@name='FaceServiceClient']/method[@name='deleteFacesFromFaceList']/parameter[@name='p0']" name="name">faceListId</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/interface[@name='FaceServiceClient']/method[@name='deleteFacesFromFaceList']/parameter[@name='p1']" name="name">persistedFaceId</attr>
 </metadata>
