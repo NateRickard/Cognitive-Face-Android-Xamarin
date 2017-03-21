@@ -200,3 +200,9 @@ GoogleMapsUtils.iOS/extern/libGoogleMapsUtils-x86_64.a
 GoogleMapsUtils.iOS/extern/libGoogleMapsUtils.a
 
 GoogleMapsUtils.iOS/extern/ios/google-maps-ios-utils/
+
+Cognitive.Face.Android/extern/android/lib-debug.aar
+
+Cognitive.Face.Android/extern/android/lib-release.aar
+
+Cognitive.Face.Android/extern/android/Cognitive-Face-Android/
