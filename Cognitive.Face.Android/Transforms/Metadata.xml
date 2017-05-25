@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <metadata>
-	<attr path="/api/package[@name='com.microsoft.projectoxford.face']" name="managedName">Xamarin.Cognitive.Face.Android</attr>
-	<attr path="/api/package[@name='com.microsoft.projectoxford.face.rest']" name="managedName">Xamarin.Cognitive.Face.Android.Rest</attr>
-	<attr path="/api/package[@name='com.microsoft.projectoxford.face.common']" name="managedName">Xamarin.Cognitive.Face.Android.Common</attr>
-	<attr path="/api/package[@name='com.microsoft.projectoxford.face.contract']" name="managedName">Xamarin.Cognitive.Face.Android.Contract</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']" name="managedName">Xamarin.Cognitive.Face.Droid</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face.rest']" name="managedName">Xamarin.Cognitive.Face.Droid.Rest</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face.common']" name="managedName">Xamarin.Cognitive.Face.Droid.Common</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face.contract']" name="managedName">Xamarin.Cognitive.Face.Droid.Contract</attr>
 	<!--	FaceServiceRestClient -->
 	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/constructor[@name='FaceServiceRestClient' and count(parameter)=1]/parameter[@name='p0']" name="name">subscriptionKey</attr>
 	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/constructor[@name='FaceServiceRestClient' and count(parameter)=2]/parameter[@name='p0']" name="name">serviceHost</attr>
