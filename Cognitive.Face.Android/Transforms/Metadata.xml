@@ -1,10 +1,18 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <metadata>
+	<!-- Namespace fixes -->
 	<attr path="/api/package[@name='com.microsoft.projectoxford.face']" name="managedName">Xamarin.Cognitive.Face.Droid</attr>
 	<attr path="/api/package[@name='com.microsoft.projectoxford.face.rest']" name="managedName">Xamarin.Cognitive.Face.Droid.Rest</attr>
 	<attr path="/api/package[@name='com.microsoft.projectoxford.face.common']" name="managedName">Xamarin.Cognitive.Face.Droid.Common</attr>
 	<attr path="/api/package[@name='com.microsoft.projectoxford.face.contract']" name="managedName">Xamarin.Cognitive.Face.Droid.Contract</attr>
-	<!--	FaceServiceRestClient -->
+	<!-- Duplicate class name fixes -->
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face.contract']/class[@name='Blur.BlurLevel']" name="managedName">Blur.BlurLevels</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face.contract']/class[@name='Exposure.ExposureLevel']" name="managedName">Exposure.ExposureLevels</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face.contract']/class[@name='Hair.HairColor']" name="managedName">Hair.HairColors</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face.contract']/class[@name='Noise.NoiseLevel']" name="managedName">Noise.NoiseLevels</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face.contract']/class[@name='TrainingStatus.Status']" name="managedType">TrainingStatusType</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face.contract']/class[@name='TrainingStatus.Status']" name="managedName">TrainingStatus.TrainingStatusType</attr>
+	<!--	FaceServiceRestClient param names -->
 	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/constructor[@name='FaceServiceRestClient' and count(parameter)=1]/parameter[@name='p0']" name="name">subscriptionKey</attr>
 	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/constructor[@name='FaceServiceRestClient' and count(parameter)=2]/parameter[@name='p0']" name="name">serviceHost</attr>
 	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/constructor[@name='FaceServiceRestClient' and count(parameter)=2]/parameter[@name='p1']" name="name">subscriptionKey</attr>
@@ -131,7 +139,7 @@
 	<!--	public void deleteFacesFromFaceList(String faceListId, UUID persistedFaceId) -->
 	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/method[@name='deleteFacesFromFaceList']/parameter[@name='p0']" name="name">faceListId</attr>
 	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/method[@name='deleteFacesFromFaceList']/parameter[@name='p1']" name="name">persistedFaceId</attr>
-	<!--	IFaceServiceClient -->
+	<!--	IFaceServiceClient  param names -->
 	<!--	public Face[] detect(String url, boolean returnFaceId, boolean returnFaceLandmarks, FaceAttributeType[] returnFaceAttributes)
 			public Face[] detect(InputStream imageStream, boolean returnFaceId, boolean returnFaceLandmarks, FaceAttributeType[] returnFaceAttributes) -->
 	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/interface[@name='FaceServiceClient']/method[@name='detect']/parameter[@name='p0' and @type='java.lang.String']" name="name">url</attr>
