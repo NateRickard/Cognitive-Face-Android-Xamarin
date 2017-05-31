@@ -59,6 +59,13 @@
 	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/method[@name='getPerson']/parameter[@name='p1']" name="name">personId</attr>
 	<!--	public Person[] getPersons(String personGroupId) -->
 	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/method[@name='getPersons']/parameter[@name='p0']" name="name">personGroupId</attr>
+	<!--	public PersonGroup[] listPersons(String personGroupId) -->
+	<!--	public PersonGroup[] listPersons(String personGroupId, String start) -->
+	<!--	public PersonGroup[] listPersons(String personGroupId, int top) -->
+	<!--	public PersonGroup[] listPersons(String personGroupId, String start, int top) -->
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/method[@name='listPersons']/parameter[@name='p0']" name="name">personGroupId</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/method[@name='listPersons']/parameter[@name='p1' and @type='java.lang.String']" name="name">start</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/method[@name='listPersons']/parameter[@type='int']" name="name">top</attr>
 	<!--	public AddPersistedFaceResult addPersonFace(String personGroupId, UUID personId, String url, String userData, FaceRectangle targetFace) 
 			public AddPersistedFaceResult addPersonFace(String personGroupId, UUID personId, InputStream imageStream, String userData, FaceRectangle targetFace) -->
 	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/method[@name='addPersonFace']/parameter[@name='p0']" name="name">personGroupId</attr>
@@ -176,6 +183,13 @@
 	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/interface[@name='FaceServiceClient']/method[@name='getPerson']/parameter[@name='p1']" name="name">personId</attr>
 	<!--	public Person[] getPersons(String personGroupId) -->
 	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/interface[@name='FaceServiceClient']/method[@name='getPersons']/parameter[@name='p0']" name="name">personGroupId</attr>
+	<!--	public PersonGroup[] listPersons(String personGroupId) -->
+	<!--	public PersonGroup[] listPersons(String personGroupId, String start) -->
+	<!--	public PersonGroup[] listPersons(String personGroupId, int top) -->
+	<!--	public PersonGroup[] listPersons(String personGroupId, String start, int top) -->
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/interface[@name='FaceServiceClient']/method[@name='listPersons']/parameter[@name='p0']" name="name">personGroupId</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/interface[@name='FaceServiceClient']/method[@name='listPersons']/parameter[@name='p1' and @type='java.lang.String']" name="name">start</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/interface[@name='FaceServiceClient']/method[@name='listPersons']/parameter[@type='int']" name="name">top</attr>
 	<!--	public AddPersistedFaceResult addPersonFace(String personGroupId, UUID personId, String url, String userData, FaceRectangle targetFace) 
 			public AddPersistedFaceResult addPersonFace(String personGroupId, UUID personId, InputStream imageStream, String userData, FaceRectangle targetFace) -->
 	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/interface[@name='FaceServiceClient']/method[@name='addPersonFace']/parameter[@name='p0']" name="name">personGroupId</attr>
