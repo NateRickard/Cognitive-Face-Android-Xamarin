@@ -56,8 +56,8 @@
 	<!--	public PersonGroup getPersonGroup(String personGroupId) -->
 	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/method[@name='getPersonGroup']/parameter[@name='p0']" name="name">personGroupId</attr>
 	<!--	public PersonGroup[] listPersonGroups(String start, int top) -->
-	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/method[@name='listPersonGroups']/parameter[@name='p0']" name="name">start</attr>
-	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/method[@name='listPersonGroups']/parameter[@name='p1']" name="name">top</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/method[@name='listPersonGroups']/parameter[@type='java.lang.String']" name="name">start</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/method[@name='listPersonGroups']/parameter[@type='int']" name="name">top</attr>
 	<!--	public CreatePersonResult createPerson(String personGroupId, String name, String userData) -->
 	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/method[@name='createPerson']/parameter[@name='p0']" name="name">personGroupId</attr>
 	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/class[@name='FaceServiceRestClient']/method[@name='createPerson']/parameter[@name='p1']" name="name">name</attr>
@@ -180,8 +180,8 @@
 	<!--	public PersonGroup getPersonGroup(String personGroupId) -->
 	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/interface[@name='FaceServiceClient']/method[@name='getPersonGroup']/parameter[@name='p0']" name="name">personGroupId</attr>
 	<!--	public PersonGroup[] listPersonGroups(String start, int top) -->
-	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/interface[@name='FaceServiceClient']/method[@name='listPersonGroups']/parameter[@name='p0']" name="name">start</attr>
-	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/interface[@name='FaceServiceClient']/method[@name='listPersonGroups']/parameter[@name='p1']" name="name">top</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/interface[@name='FaceServiceClient']/method[@name='listPersonGroups']/parameter[@type='java.lang.String']" name="name">start</attr>
+	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/interface[@name='FaceServiceClient']/method[@name='listPersonGroups']/parameter[@type='int']" name="name">top</attr>
 	<!--	public CreatePersonResult createPerson(String personGroupId, String name, String userData) -->
 	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/interface[@name='FaceServiceClient']/method[@name='createPerson']/parameter[@name='p0']" name="name">personGroupId</attr>
 	<attr path="/api/package[@name='com.microsoft.projectoxford.face']/interface[@name='FaceServiceClient']/method[@name='createPerson']/parameter[@name='p1']" name="name">name</attr>
