@@ -21,4 +21,10 @@
 		<field clr-name="Failed" jni-name="Failed" value="1" />
 		<field clr-name="Running" jni-name="Running" value="2" />
 	</mapping>
+	<mapping clr-enum-type="Xamarin.Cognitive.Face.Droid.Contract.GlassesType" jni-class="com/microsoft/projectoxford/face/contract/Glasses">
+		<field clr-name="NoGlasses" jni-name="Succeeded" value="0" />
+		<field clr-name="ReadingGlasses" jni-name="Failed" value="1" />
+		<field clr-name="Sunglasses" jni-name="Running" value="2" />
+		<field clr-name="SwimmingGoggles" jni-name="Running" value="3" />
+	</mapping>
 </enum-field-mappings>
